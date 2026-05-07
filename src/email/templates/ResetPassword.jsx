@@ -88,7 +88,7 @@ export const ResetPassword = ({ data, onUpdate, onImageClick, uneditable }) => {
                     </table>
                 </div>
                 <div style={{ marginTop: '32px' }}>
-                    <p style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 'bold' }}>SECURED BY BOTIVATE AUTH</p>
+                    <p style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 'bold' }}>SECURED BY ACE MAIL AUTH</p>
                 </div>
             </center>
         </div>

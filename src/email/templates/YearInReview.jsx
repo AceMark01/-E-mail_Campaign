@@ -70,7 +70,7 @@ export const YearInReview = ({ data, onUpdate, onImageClick, uneditable }) => {
                                     />
                                     <EditableText
                                         field="content"
-                                        value={data.content || "Before we step into the future, let's take a moment to celebrate everything you achieved with Botivate in 2026. From streamlined workflows to record-breaking output, here is your story."}
+                                        value={data.content || "Before we step into the future, let's take a moment to celebrate everything you achieved with Ace Mail in 2026. From streamlined workflows to record-breaking output, here is your story."}
                                         onUpdate={onUpdate}
                                         uneditable={uneditable}
                                         style={{ fontSize: '17px', color: SaasThemeText, margin: '0 0 40px 0', lineHeight: '1.6' }}

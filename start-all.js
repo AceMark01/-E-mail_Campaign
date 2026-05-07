@@ -2,7 +2,7 @@ import { spawn } from 'child_process';
 
 const options = { stdio: 'inherit', shell: true };
 
-console.log('🚀 Starting Botivate Fullsystem...');
+console.log('🚀 Starting Ace Mail Fullsystem...');
 
 // Start Backend
 const server = spawn('npx', ['nodemon', 'server.js'], options);

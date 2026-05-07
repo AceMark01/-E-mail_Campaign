@@ -55,7 +55,7 @@ export const ReferAFriend = ({ data, onUpdate, onImageClick, uneditable }) => {
                                     />
                                     <EditableText
                                         field="content"
-                                        value={data.content || "Invite your friends to try Botivate. They'll get a $20 credit, and you'll get $20 added to your account when they sign up."}
+                                        value={data.content || "Invite your friends to try Ace Mail. They'll get a $20 credit, and you'll get $20 added to your account when they sign up."}
                                         onUpdate={onUpdate}
                                         uneditable={uneditable}
                                         style={{ fontSize: '18px', color: SaasThemeText, margin: '0 0- 40px 0', lineHeight: '1.6' }}

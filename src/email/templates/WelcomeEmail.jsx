@@ -49,7 +49,7 @@ export const WelcomeEmail = ({ data, onUpdate, onImageClick, uneditable }) => {
                                     </div>
                                     <EditableText
                                         field="title"
-                                        value={data.title || "Welcome to Botivate"}
+                                        value={data.title || "Welcome to Ace Mail"}
                                         isHeader
                                         onUpdate={onUpdate}
                                         uneditable={uneditable}
@@ -85,7 +85,7 @@ export const WelcomeEmail = ({ data, onUpdate, onImageClick, uneditable }) => {
                                     </h3>
                                     {[
                                         { i: "01", t: "Configure Your Core", d: "Sync your existing tools and define your initial automation parameters." },
-                                        { i: "02", t: "Invite Your Team", d: "Collaboration is at the heart of Botivate. Bring your colleagues on board." },
+                                        { i: "02", t: "Invite Your Team", d: "Collaboration is at the heart of Ace Mail. Bring your colleagues on board." },
                                         { i: "03", t: "Execute First Flow", d: "Deploy your first intelligent workflow and witness the efficiency." }
                                     ].map((step, idx) => (
                                         <table key={idx} border="0" cellPadding="0" cellSpacing="0" width="100%" style={{ marginBottom: idx === 2 ? '0' : '24px' }}>
@@ -114,5 +114,3 @@ export const WelcomeEmail = ({ data, onUpdate, onImageClick, uneditable }) => {
         </div>
     );
 };
-
-

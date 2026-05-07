@@ -81,7 +81,7 @@ function sendMailBridge(data) {
     // Basic options
     const options = {
       htmlBody: data.html,
-      name: "Botivate Team"
+      name: "Ace Mail Team"
     };
 
     // If a specific sender is requested (must be a valid alias of the account)

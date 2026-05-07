@@ -119,7 +119,7 @@ export const StandardHeader = ({ uneditable }) => (
             <tr>
                 <td align="center" style={{ padding: '20px 0' }}>
                     <a href="#" style={{ textDecoration: 'none', fontSize: '24px', fontWeight: 'bold', color: '#0c659f', fontFamily: 'sans-serif' }}>
-                        Botivate
+                        Ace Mail
                     </a>
                 </td>
             </tr>
@@ -128,7 +128,7 @@ export const StandardHeader = ({ uneditable }) => (
 );
 
 export const StandardFooter = ({ uneditable }) => (
-    <table id="botivate-footer" border="0" cellPadding="0" cellSpacing="0" width="100%" style={{ backgroundColor: '#0f172a', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
+    <table id="ace-mail-footer" border="0" cellPadding="0" cellSpacing="0" width="100%" style={{ backgroundColor: '#0f172a', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
         <tbody>
             {/* Main Footer Content */}
             <tr>
@@ -148,7 +148,7 @@ export const StandardFooter = ({ uneditable }) => (
                                                         <div style={{ display: 'inline-block', backgroundColor: '#0c659f', padding: '8px', borderRadius: '0px', marginBottom: '10px' }}>
                                                             <span style={{ fontSize: '20px', color: '#ffffff', fontWeight: 'bold' }}>⚡</span>
                                                         </div>
-                                                        <span style={{ fontSize: '20px', fontWeight: 'bold', color: '#ffffff', marginLeft: '8px' }}>Botivate</span>
+                                                        <span style={{ fontSize: '20px', fontWeight: 'bold', color: '#ffffff', marginLeft: '8px' }}>Ace Mail</span>
                                                     </div>
                                                     <p style={{ fontSize: '13px', lineHeight: '1.6', color: '#94a3b8', margin: '0 0 20px 0' }}>
                                                         Automate. Manage. Scale.
@@ -159,7 +159,7 @@ export const StandardFooter = ({ uneditable }) => (
                                                     {/* Contact Info */}
                                                     <div style={{ marginTop: '20px' }}>
                                                         <p style={{ margin: '0 0 8px 0', fontSize: '13px', color: '#94a3b8' }}>
-                                                            <span style={{ color: '#0c659f' }}>✉</span> info@botivate.in
+                                                            <span style={{ color: '#0c659f' }}>✉</span> info@ace-mail.in
                                                         </p>
                                                         <p style={{ margin: '0 0 8px 0', fontSize: '13px', color: '#94a3b8' }}>
                                                             <span style={{ color: '#0c659f' }}>📞</span> +919993023243
@@ -227,7 +227,7 @@ export const StandardFooter = ({ uneditable }) => (
                                                 {/* Copyright & Links */}
                                                 <td valign="middle" align="left">
                                                     <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#64748b' }}>
-                                                        © {new Date().getFullYear()} Botivate. All rights reserved. |
+                                                        © {new Date().getFullYear()} Ace Mail. All rights reserved. |
                                                         <a href="#" style={{ color: '#64748b', textDecoration: 'none', marginLeft: '5px' }}>Privacy Policy</a> |
                                                         <a href="#" style={{ color: '#64748b', textDecoration: 'none', marginLeft: '5px' }}>Terms of Service</a>
                                                     </p>
@@ -280,7 +280,7 @@ export const StandardFooter = ({ uneditable }) => (
                     textAlign: 'center'
                 }}>
                     <p style={{ margin: 0, color: '#94a3b8', fontSize: '10px', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase' }}>
-                        POWERED BY BOTIVATE
+                        POWERED BY ACE MAIL
                     </p>
                 </td>
             </tr>

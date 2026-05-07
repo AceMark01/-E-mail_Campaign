@@ -55,7 +55,7 @@ export const AppDownload = ({ data, onUpdate, onImageClick, uneditable }) => {
                         <div style={{ marginBottom: '48px' }}>
                             <EditableText
                                 field="subtitle"
-                                value={data.subtitle || "The future of automation is mobile. Experience Botivate's intelligent core anywhere, synchronized in real-time."}
+                                value={data.subtitle || "The future of automation is mobile. Experience Ace Mail's intelligent core anywhere, synchronized in real-time."}
                                 onUpdate={onUpdate}
                                 uneditable={uneditable}
                                 style={{ fontSize: '18px', color: 'rgba(255,255,255,0.8)', lineHeight: '1.6', fontWeight: '400' }}
@@ -74,7 +74,7 @@ export const AppDownload = ({ data, onUpdate, onImageClick, uneditable }) => {
                             <div style={{ backgroundColor: '#ffffff', padding: '16px', borderRadius: '24px' }}>
                                 <EditableImg
                                     field="qrCode"
-                                    src={data.qrCode || "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://botivate.ai"}
+                                    src={data.qrCode || "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://acemail.ai"}
                                     label="App Download QR"
                                     onImageClick={onImageClick}
                                     uneditable={uneditable}

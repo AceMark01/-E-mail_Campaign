@@ -93,7 +93,7 @@ export const ValentineSpecial = ({ data, onUpdate, onImageClick, uneditable }) =
                                     </div>
                                     <div style={{ paddingTop: '48px', borderTop: '1px solid #fecdd3' }}>
                                         <p style={{ margin: 0, color: romanticTheme.secondary, fontSize: '12px', fontWeight: '900', letterSpacing: '2px', textTransform: 'uppercase' }}>
-                                            Made with love by Botivate
+                                            Made with love by Ace Mail
                                         </p>
                                     </div>
                                 </td>

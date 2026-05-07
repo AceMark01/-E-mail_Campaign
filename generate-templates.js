@@ -141,7 +141,7 @@ export const ${tpl.name} = ({ data, onUpdate, onImageClick, uneditable }) => {
       content: "Don't miss out on our special event! Grab your offers now before they are gone.",
       image: "${tpl.img}",
       ctaText: "Explore Now",
-      ctaLink: "https://botivate.ai/offers"
+      ctaLink: "https://acemail.ai/offers"
     }
   }`);
 });

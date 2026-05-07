@@ -1,5 +1,5 @@
 // src/data/brandedTemplates.js
-// Botivate — B2B Software / SaaS Company
+// Ace Mail — B2B Software / SaaS Company
 
 
 export const BRANDED_TEMPLATES = [
@@ -11,11 +11,11 @@ export const BRANDED_TEMPLATES = [
     layoutType: "HERO_SaaS",
     idealFor: "Potential Leads",
     defaultData: {
-      title: "Scale Your Business with Botivate",
-      content: "Botivate helps businesses automate workflows, manage teams, and scale operations effortlessly. Book a live demo today and see the difference.",
+      title: "Scale Your Business with Ace Mail",
+      content: "Ace Mail helps businesses automate workflows, manage teams, and scale operations effortlessly. Book a live demo today and see the difference.",
       banner: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&q=80",
       ctaText: "Book a Free Demo",
-      ctaLink: "https://botivate.in/demo"
+      ctaLink: "https://acemail.in/demo"
     }
   },
   {
@@ -24,7 +24,7 @@ export const BRANDED_TEMPLATES = [
     layoutType: "QUAD_RETAIL",
     idealFor: "New Clients",
     defaultData: {
-      title: "Welcome to Botivate",
+      title: "Welcome to Ace Mail",
       subtitle: "Everything you need to get started",
       footer: "Free onboarding & dedicated support included",
       product0: "Setup", product1: "Training", product2: "Support", product3: "Access",
@@ -56,7 +56,7 @@ export const BRANDED_TEMPLATES = [
     layoutType: "TRIO_FEATURE",
     idealFor: "Interns & Employees",
     defaultData: {
-      title: "Why Work at Botivate?",
+      title: "Why Work at Ace Mail?",
       subtitle: "We invest in people, not just products",
       f1_title: "Remote-First", f1_desc: "Work from anywhere in India or around the world.",
       f2_title: "Continuous Learning", f2_desc: "Access to premium tech courses, workshops, and mentorship.",
@@ -69,7 +69,7 @@ export const BRANDED_TEMPLATES = [
     layoutType: "MODERN_BLOG",
     idealFor: "Employees",
     defaultData: {
-      title: "Botivate Insider — February 2026",
+      title: "Ace Mail Insider — February 2026",
       blog1_title: "Q1 Engineering Milestone",
       blog1_excerpt: "Our team shipped 14 features this quarter, reducing manual workflows by 35% for our top clients.",
       blog2_title: "New Team Members",
@@ -87,9 +87,9 @@ export const BRANDED_TEMPLATES = [
       leftBanner: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=300&h=400&fit=crop&q=80",
       rightBanner: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=300&h=400&fit=crop&q=80",
       title: "New: AI-Powered Task Automation",
-      content: "Automate repetitive tasks with zero code. Connect 100+ tools and let Botivate do the work.",
+      content: "Automate repetitive tasks with zero code. Connect 100+ tools and let Ace Mail do the work.",
       ctaText: "Explore the Feature",
-      ctaLink: "https://botivate.in/features"
+      ctaLink: "https://acemail.in/features"
     }
   },
   {
@@ -99,7 +99,7 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Potential Leads",
     defaultData: {
       title: "Trusted by Growing Businesses",
-      reviewText: "Botivate helped us eliminate 80% of our manual reporting. Our team now focuses on strategy instead of spreadsheets.",
+      reviewText: "Ace Mail helped us eliminate 80% of our manual reporting. Our team now focuses on strategy instead of spreadsheets.",
       author: "Operations Head, FinTech Corp",
       rating: "⭐⭐⭐⭐⭐"
     }
@@ -129,15 +129,15 @@ export const BRANDED_TEMPLATES = [
   },
   {
     id: "tp_010",
-    name: "Botivate Mobile App",
+    name: "Ace Mail Mobile App",
     layoutType: "APP_DOWNLOAD",
     idealFor: "Clients & Employees",
     defaultData: {
       title: "Manage Your Team on the Go",
-      content: "Download the Botivate app for iOS & Android — tasks, approvals, and reports in your pocket.",
-      qrCode: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://botivate.in/download",
+      content: "Download the Ace Mail app for iOS & Android — tasks, approvals, and reports in your pocket.",
+      qrCode: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://acemail.in/download",
       ctaText: "Download the App",
-      ctaLink: "https://botivate.in/download"
+      ctaLink: "https://acemail.in/download"
     }
   },
 
@@ -152,7 +152,7 @@ export const BRANDED_TEMPLATES = [
       content: "Our biggest deal of the year. Upgrade your plan today and save 50% for the first 6 months. Limited seats available.",
       image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&h=300&fit=crop&q=80",
       ctaText: "Grab the Deal",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -165,7 +165,7 @@ export const BRANDED_TEMPLATES = [
       content: "The digital economy never sleeps. Upgrade to our Business plan today and unlock unlimited automations, advanced analytics, and priority support.",
       image: "https://images.unsplash.com/photo-1531297172868-9f1d1b53e9ff?w=1200&h=600&fit=crop&q=80",
       ctaText: "Upgrade My Plan",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -178,7 +178,7 @@ export const BRANDED_TEMPLATES = [
       content: "To celebrate the holiday season, we're offering 3 months free when you switch to an annual plan. Our way of saying thank you.",
       image: "https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1200&h=600&fit=crop&q=80",
       ctaText: "Claim Holiday Offer",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -187,11 +187,11 @@ export const BRANDED_TEMPLATES = [
     layoutType: "NewYearGreeting",
     idealFor: "Festivals",
     defaultData: {
-      title: "Happy New Year from Botivate!",
+      title: "Happy New Year from Ace Mail!",
       content: "2026 is your year to automate more, stress less, and grow faster. We're with you every step of the way. Here's to a productive year ahead!",
       image: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=1200&h=600&fit=crop&q=80",
       ctaText: "Start the Year Right",
-      ctaLink: "https://botivate.in"
+      ctaLink: "https://acemail.in"
     }
   },
   {
@@ -201,10 +201,10 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Festivals",
     defaultData: {
       title: "👻 Scary Good Deals",
-      content: "Don't be spooked by manual workflows any longer. For this Halloween only, get 30% off any Botivate plan. Offer vanishes at midnight!",
+      content: "Don't be spooked by manual workflows any longer. For this Halloween only, get 30% off any Ace Mail plan. Offer vanishes at midnight!",
       image: "https://images.unsplash.com/photo-1509557965875-b88c97176a26?w=1200&h=600&fit=crop&q=80",
       ctaText: "Grab the Offer",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -217,7 +217,7 @@ export const BRANDED_TEMPLATES = [
       content: "This Valentine's Day, treat your team to the gift of efficiency. Unlock premium features at a special rate — because great teams deserve great tools.",
       image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&h=600&fit=crop&q=80",
       ctaText: "Explore the Gift",
-      ctaLink: "https://botivate.in/features"
+      ctaLink: "https://acemail.in/features"
     }
   },
   {
@@ -230,7 +230,7 @@ export const BRANDED_TEMPLATES = [
       content: "New quarter, new goals. This Easter, we're offering 20% off on Business plan upgrades to help your team hit Q2 targets faster.",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=600&fit=crop&q=80",
       ctaText: "View the Offer",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -243,7 +243,7 @@ export const BRANDED_TEMPLATES = [
       content: "Half the year is gone — time to double your productivity. Upgrade to an annual plan this summer and save 40% vs monthly billing.",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=600&fit=crop&q=80",
       ctaText: "Switch to Annual",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -256,7 +256,7 @@ export const BRANDED_TEMPLATES = [
       content: "Don't let your plan expire. Renew before December 31st and lock in current pricing for another full year. Rates increase in January.",
       image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=600&fit=crop&q=80",
       ctaText: "Renew My Plan",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -269,7 +269,7 @@ export const BRANDED_TEMPLATES = [
       content: "We've cut onboarding time in half with our new setup wizard. Start your free trial today and go live in under 30 minutes.",
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80",
       ctaText: "Start Free Trial",
-      ctaLink: "https://botivate.in/signup"
+      ctaLink: "https://acemail.in/signup"
     }
   },
   {
@@ -282,7 +282,7 @@ export const BRANDED_TEMPLATES = [
       content: "Our biggest quarterly release is here. Smarter dashboards, faster exports, and a brand new mobile experience — all live now.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop&q=80",
       ctaText: "See What's New",
-      ctaLink: "https://botivate.in/changelog"
+      ctaLink: "https://acemail.in/changelog"
     }
   },
   {
@@ -291,11 +291,11 @@ export const BRANDED_TEMPLATES = [
     layoutType: "DiwaliFestival",
     idealFor: "Festivals",
     defaultData: {
-      title: "Happy Diwali from Botivate! 🪔",
+      title: "Happy Diwali from Ace Mail! 🪔",
       content: "May this festival of lights bring new opportunities for your business. As our Diwali gift, enjoy 25% off on any plan upgrade this week.",
       image: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=1200&h=600&fit=crop&q=80",
       ctaText: "Claim Diwali Offer",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -305,10 +305,10 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Festivals",
     defaultData: {
       title: "Thank You for a Great Year",
-      content: "We are deeply grateful for every client, partner, and team member who has trusted Botivate this year. Your success is our biggest achievement.",
+      content: "We are deeply grateful for every client, partner, and team member who has trusted Ace Mail this year. Your success is our biggest achievement.",
       image: "https://images.unsplash.com/photo-1574527327617-d2bada33a16d?w=1200&h=600&fit=crop&q=80",
       ctaText: "Message from Our Team",
-      ctaLink: "https://botivate.in/blog"
+      ctaLink: "https://acemail.in/blog"
     }
   },
   {
@@ -320,8 +320,8 @@ export const BRANDED_TEMPLATES = [
       title: "Happy Mother's Day 🌸",
       content: "To all the incredible mothers on our team and in our community — your strength, patience, and dedication inspire us every day. Thank you.",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=600&fit=crop&q=80",
-      ctaText: "A Note from Botivate",
-      ctaLink: "https://botivate.in"
+      ctaText: "A Note from Ace Mail",
+      ctaLink: "https://acemail.in"
     }
   },
   {
@@ -333,8 +333,8 @@ export const BRANDED_TEMPLATES = [
       title: "Happy Father's Day 👔",
       content: "To all the amazing fathers who balance work with family — we see you and we appreciate you. Wishing you a day as wonderful as the work you do.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&h=600&fit=crop&q=80",
-      ctaText: "A Note from Botivate",
-      ctaLink: "https://botivate.in"
+      ctaText: "A Note from Ace Mail",
+      ctaLink: "https://acemail.in"
     }
   },
 
@@ -350,7 +350,7 @@ export const BRANDED_TEMPLATES = [
       content: "Join our expert-led live session and learn how to build your first automation workflow from scratch — no coding required.",
       image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=1200&h=600&fit=crop&q=80",
       ctaText: "Reserve My Seat",
-      ctaLink: "https://botivate.in/webinar"
+      ctaLink: "https://acemail.in/webinar"
     }
   },
   {
@@ -359,14 +359,14 @@ export const BRANDED_TEMPLATES = [
     layoutType: "ConferencePass",
     idealFor: "Events",
     defaultData: {
-      title: "BotivateConf 2026",
+      title: "Ace MailConf 2026",
       subtitle: "The Future of Business Automation",
       date: "April 10–12, 2026",
       location: "Hyderabad International Convention Centre",
       content: "3 days of keynotes, hands-on workshops, and networking with automation leaders across India.",
       image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=1200&h=600&fit=crop&q=80",
       ctaText: "Get Your Pass",
-      ctaLink: "https://botivate.in/conference"
+      ctaLink: "https://acemail.in/conference"
     }
   },
   {
@@ -380,7 +380,7 @@ export const BRANDED_TEMPLATES = [
       content: "A focused half-day workshop where you'll design, build, and deploy your first automation workflow with live guidance from our engineers.",
       image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=600&fit=crop&q=80",
       ctaText: "Register Now — Free",
-      ctaLink: "https://botivate.in/workshop"
+      ctaLink: "https://acemail.in/workshop"
     }
   },
   {
@@ -389,14 +389,14 @@ export const BRANDED_TEMPLATES = [
     layoutType: "EventInvite",
     idealFor: "Events",
     defaultData: {
-      title: "You're Invited to BotivateConnect",
+      title: "You're Invited to Ace MailConnect",
       subtitle: "An Evening of Tech, Talks & Networking",
       date: "March 5, 2026 • 6:30 PM",
       location: "The Grand, Bangalore",
       content: "Join founders, product leads, and developers for an exclusive evening of demos, discussions, and making meaningful connections.",
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=600&fit=crop&q=80",
       ctaText: "RSVP Now",
-      ctaLink: "https://botivate.in/connect"
+      ctaLink: "https://acemail.in/connect"
     }
   },
 
@@ -407,12 +407,12 @@ export const BRANDED_TEMPLATES = [
     layoutType: "NewsletterModern",
     idealFor: "Newsletters",
     defaultData: {
-      title: "Botivate Weekly",
+      title: "Ace Mail Weekly",
       subtitle: "Your weekly dose of automation insights & product news",
       content: "This week: How AI is reshaping task management, a deep-dive into our new approval workflows, and tips from our power users.",
       image: "https://images.unsplash.com/photo-1586281380149-9a11cca725b0?w=1200&h=600&fit=crop&q=80",
       ctaText: "Read Full Issue",
-      ctaLink: "https://botivate.in/newsletter"
+      ctaLink: "https://acemail.in/newsletter"
     }
   },
   {
@@ -421,10 +421,10 @@ export const BRANDED_TEMPLATES = [
     layoutType: "WeeklyDigest",
     idealFor: "Newsletters",
     defaultData: {
-      title: "This Week at Botivate",
+      title: "This Week at Ace Mail",
       content: "A quick summary of what the team shipped, key metrics from this week, and what we're focused on next.",
       ctaText: "View Full Digest",
-      ctaLink: "https://botivate.in/digest"
+      ctaLink: "https://acemail.in/digest"
     }
   },
   {
@@ -434,10 +434,10 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Newsletters",
     defaultData: {
       title: "February in Review",
-      content: "From 3 new features to 200 new clients — here's everything that happened at Botivate this month and what's coming in March.",
+      content: "From 3 new features to 200 new clients — here's everything that happened at Ace Mail this month and what's coming in March.",
       image: "https://images.unsplash.com/photo-1586281380149-9a11cca725b0?w=1200&h=600&fit=crop&q=80",
       ctaText: "View Full Report",
-      ctaLink: "https://botivate.in/monthly-review"
+      ctaLink: "https://acemail.in/monthly-review"
     }
   },
   {
@@ -446,11 +446,11 @@ export const BRANDED_TEMPLATES = [
     layoutType: "YearInReview",
     idealFor: "Announcements",
     defaultData: {
-      title: "Botivate: 2025 in Review",
+      title: "Ace Mail: 2025 in Review",
       content: "From our first 100 clients to 5,000+ businesses automated, here's how 2025 shaped who we are today. Thank you for being part of the journey.",
       image: "https://images.unsplash.com/photo-1549924231-f129b911e442?w=1200&h=600&fit=crop&q=80",
       ctaText: "Read the Full Story",
-      ctaLink: "https://botivate.in/year-review"
+      ctaLink: "https://acemail.in/year-review"
     }
   },
   {
@@ -459,11 +459,11 @@ export const BRANDED_TEMPLATES = [
     layoutType: "ProductUpdate",
     idealFor: "Announcements",
     defaultData: {
-      title: "Botivate v3.0 is Here",
+      title: "Ace Mail v3.0 is Here",
       content: "We've rebuilt the core from the ground up — faster automations, a redesigned dashboard, and a brand new mobile app. All free for existing users.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=600&fit=crop&q=80",
       ctaText: "See Full Changelog",
-      ctaLink: "https://botivate.in/changelog"
+      ctaLink: "https://acemail.in/changelog"
     }
   },
 
@@ -475,10 +475,10 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Potential Leads",
     defaultData: {
       title: "Your Free Trial is Ending Soon!",
-      content: "You've been building great things with Botivate — don't let it stop here. Upgrade now and keep all your workflows, data, and settings intact.",
+      content: "You've been building great things with Ace Mail — don't let it stop here. Upgrade now and keep all your workflows, data, and settings intact.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop&q=80",
       ctaText: "Upgrade My Account",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -489,10 +489,10 @@ export const BRANDED_TEMPLATES = [
     defaultData: {
       title: "Subscription Confirmed! 🎉",
       orderNumber: "#SUB-2026-00142",
-      content: "Your Botivate Business plan is now active. You have full access to all premium features, unlimited automations, and priority support.",
+      content: "Your Ace Mail Business plan is now active. You have full access to all premium features, unlimited automations, and priority support.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop&q=80",
       ctaText: "Launch My Dashboard",
-      ctaLink: "https://botivate.in/dashboard"
+      ctaLink: "https://acemail.in/dashboard"
     }
   },
   {
@@ -504,7 +504,7 @@ export const BRANDED_TEMPLATES = [
       title: "Your Onboarding Has Begun!",
       content: "Your dedicated onboarding specialist has been assigned. Expect a call within 24 hours to walk you through your first workflow setup.",
       ctaText: "Access My Dashboard",
-      ctaLink: "https://botivate.in/dashboard"
+      ctaLink: "https://acemail.in/dashboard"
     }
   },
   {
@@ -513,10 +513,10 @@ export const BRANDED_TEMPLATES = [
     layoutType: "DeliverySuccess",
     idealFor: "Clients",
     defaultData: {
-      title: "You're Live on Botivate! ✅",
+      title: "You're Live on Ace Mail! ✅",
       content: "Your first automation workflow is now active and running. Monitor performance, manage tasks, and track results — all from your dashboard.",
       ctaText: "View Live Dashboard",
-      ctaLink: "https://botivate.in/dashboard"
+      ctaLink: "https://acemail.in/dashboard"
     }
   },
   {
@@ -529,7 +529,7 @@ export const BRANDED_TEMPLATES = [
       content: "For the next 48 hours, upgrade to any paid plan and save 30%. No coupon needed — discount applied automatically at checkout.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop&q=80",
       ctaText: "Claim 30% Off",
-      ctaLink: "https://botivate.in/pricing"
+      ctaLink: "https://acemail.in/pricing"
     }
   },
   {
@@ -539,9 +539,9 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Clients",
     defaultData: {
       title: "How Are We Doing?",
-      content: "Your feedback directly shapes the future of Botivate. It takes just 2 minutes and helps us build features that matter to you.",
+      content: "Your feedback directly shapes the future of Ace Mail. It takes just 2 minutes and helps us build features that matter to you.",
       ctaText: "Share My Feedback",
-      ctaLink: "https://botivate.in/feedback"
+      ctaLink: "https://acemail.in/feedback"
     }
   },
   {
@@ -551,9 +551,9 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Clients",
     defaultData: {
       title: "Refer a Business, Earn Rewards",
-      content: "Know someone who could benefit from Botivate? Refer them and earn 2 months free on your plan for every successful referral.",
+      content: "Know someone who could benefit from Ace Mail? Refer them and earn 2 months free on your plan for every successful referral.",
       ctaText: "Start Referring",
-      ctaLink: "https://botivate.in/refer"
+      ctaLink: "https://acemail.in/refer"
     }
   },
   {
@@ -563,10 +563,10 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Clients",
     defaultData: {
       title: "Your Loyalty Perks Are Here",
-      content: "As a long-term Botivate client, you've unlocked exclusive benefits — priority support, early feature access, and a personal account manager.",
+      content: "As a long-term Ace Mail client, you've unlocked exclusive benefits — priority support, early feature access, and a personal account manager.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop&q=80",
       ctaText: "View My Perks",
-      ctaLink: "https://botivate.in/loyalty"
+      ctaLink: "https://acemail.in/loyalty"
     }
   },
 
@@ -577,11 +577,11 @@ export const BRANDED_TEMPLATES = [
     layoutType: "WelcomeEmail",
     idealFor: "New Clients",
     defaultData: {
-      title: "Welcome to Botivate",
+      title: "Welcome to Ace Mail",
       subtitle: "Your smarter way to manage workflows, teams, and operations — all in one platform.",
       heroImage: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=600&fit=crop&q=80",
       ctaText: "Launch Your Dashboard",
-      ctaLink: "https://botivate.in/dashboard"
+      ctaLink: "https://acemail.in/dashboard"
     }
   },
   {
@@ -590,7 +590,7 @@ export const BRANDED_TEMPLATES = [
     layoutType: "ProductLaunch",
     idealFor: "Potential Leads",
     defaultData: {
-      title: "Introducing Botivate Intelligence",
+      title: "Introducing Ace Mail Intelligence",
       badge: "NOW LIVE",
       description: "AI-powered task delegation, real-time reporting, and smart approval workflows — all built into one unified platform.",
       productImage: "https://images.unsplash.com/photo-1531297172868-9f1d1b53e9ff?w=1200&h=800&fit=crop&q=80"
@@ -603,10 +603,10 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Clients",
     defaultData: {
       title: "Help Us Build Better Software",
-      content: "Share your experience with Botivate. Your input directly informs what we prioritize on our product roadmap.",
+      content: "Share your experience with Ace Mail. Your input directly informs what we prioritize on our product roadmap.",
       image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=600&fit=crop&q=80",
       ctaText: "Take the Survey",
-      ctaLink: "https://botivate.in/feedback"
+      ctaLink: "https://acemail.in/feedback"
     }
   },
   {
@@ -616,9 +616,9 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Clients",
     defaultData: {
       title: "Reset Your Password",
-      content: "We received a request to reset the password for your Botivate account. Click the button below to set a new password. This link expires in 30 minutes.",
+      content: "We received a request to reset the password for your Ace Mail account. Click the button below to set a new password. This link expires in 30 minutes.",
       ctaText: "Reset My Password",
-      ctaLink: "https://botivate.in/reset"
+      ctaLink: "https://acemail.in/reset"
     }
   },
   {
@@ -627,10 +627,10 @@ export const BRANDED_TEMPLATES = [
     layoutType: "SimpleCard",
     idealFor: "Clients",
     defaultData: {
-      title: "Important Update from Botivate",
+      title: "Important Update from Ace Mail",
       content: "We've made some improvements to your account experience. Log in to see what's new — no action required on your end.",
       ctaText: "View Update",
-      ctaLink: "https://botivate.in"
+      ctaLink: "https://acemail.in"
     }
   },
   {
@@ -643,7 +643,7 @@ export const BRANDED_TEMPLATES = [
       content: "You've been selected for early access to our Enterprise tier. Unlimited users, dedicated infrastructure, and a named account manager included.",
       image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1200&h=800&fit=crop&q=80",
       ctaText: "Accept My Invitation",
-      ctaLink: "https://botivate.in/enterprise"
+      ctaLink: "https://acemail.in/enterprise"
     }
   },
 
@@ -655,10 +655,10 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Employees",
     defaultData: {
       title: "Happy Birthday! 🎂",
-      content: "From the entire Botivate family — wishing you a day filled with joy, celebration, and well-deserved rest. You make this team better every day.",
+      content: "From the entire Ace Mail family — wishing you a day filled with joy, celebration, and well-deserved rest. You make this team better every day.",
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80",
       ctaText: "Send a Birthday Message",
-      ctaLink: "https://botivate.in"
+      ctaLink: "https://acemail.in"
     }
   },
   {
@@ -668,10 +668,10 @@ export const BRANDED_TEMPLATES = [
     idealFor: "Employees",
     defaultData: {
       title: "Happy Work Anniversary! 🎉",
-      content: "Today marks an important milestone in your journey at Botivate. Your contributions have made a real impact on our product and our culture. Thank you for being here.",
+      content: "Today marks an important milestone in your journey at Ace Mail. Your contributions have made a real impact on our product and our culture. Thank you for being here.",
       image: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=1200&h=600&fit=crop&q=80",
       ctaText: "Celebrate the Milestone",
-      ctaLink: "https://botivate.in"
+      ctaLink: "https://acemail.in"
     }
   }
 ];

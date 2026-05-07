@@ -120,7 +120,7 @@ export const ProductLaunch = ({ data, onUpdate, onImageClick, uneditable }) => {
                     </table>
                 </div>
                 <div style={{ padding: '40px 0' }}>
-                    <p style={{ color: '#64748b', fontSize: '11px', letterSpacing: '4px', fontWeight: 'bold' }}>PROJECT 2.0 • BY BOTIVATE</p>
+                    <p style={{ color: '#64748b', fontSize: '11px', letterSpacing: '4px', fontWeight: 'bold' }}>PROJECT 2.0 • BY ACE MAIL</p>
                 </div>
             </center>
         </div>

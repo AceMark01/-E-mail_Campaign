@@ -13,7 +13,7 @@ const Sidebar = () => {
         <aside className="w-64 bg-slate-900 text-white min-h-screen hidden md:flex flex-col shadow-xl">
             <div className="p-6 border-b border-slate-800">
                 <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                    Botivate
+                    Ace Mail
                 </h2>
                 <p className="text-xs text-slate-400 mt-1">Campaign Manager</p>
             </div>

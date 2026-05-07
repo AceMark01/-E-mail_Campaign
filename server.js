@@ -8,8 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
-// Google Apps Script Web App URL from environment variables
-const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbw7SHVBpwz0AbUWMUhPl5_i0bJJqBFt4IKeOJwlokuxah_IG_YJjazPVh57Jl-_uo-k/exec";
+const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL?.trim();
+
+if (!GOOGLE_SCRIPT_URL) {
+    console.warn("⚠️ WARNING: GOOGLE_SCRIPT_URL is not defined in .env file!");
+}
 
 // Helper function to interact with Google Sheets App Script
 async function googleScriptRequest(action, data = null, id = null) {

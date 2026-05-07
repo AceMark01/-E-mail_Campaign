@@ -49,7 +49,7 @@ export const WebinarInvite = ({ data, onUpdate, onImageClick, uneditable }) => {
                                     </div>
                                     <EditableText
                                         field="title"
-                                        value={data.title || "Mastering the Future of AI with Botivate"}
+                                        value={data.title || "Mastering the Future of AI with Ace Mail"}
                                         isHeader
                                         onUpdate={onUpdate}
                                         uneditable={uneditable}

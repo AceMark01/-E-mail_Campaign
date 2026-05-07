@@ -20,7 +20,7 @@ export default function Login({ onLogin }) {
 
         if (credentials.username === 'admin' && credentials.password === '123456') {
             // Success
-            localStorage.setItem('botivate_user', JSON.stringify({ name: 'Admin User', role: 'admin' }));
+            localStorage.setItem('ace_mail_user', JSON.stringify({ name: 'Admin User', role: 'admin' }));
             onLogin();
         } else {
             setError("Invalid credentials. Please try again.");
@@ -43,7 +43,7 @@ export default function Login({ onLogin }) {
                         <Mail size={32} />
                     </div>
                     <h1 className="text-2xl font-bold text-slate-900 mb-2 font-outfit uppercase tracking-tight">Login Portal</h1>
-                    <p className="text-slate-500 text-sm">Sign in to manage your Botivate campaigns</p>
+                    <p className="text-slate-500 text-sm">Sign in to manage your Ace Mail campaigns</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -107,11 +107,11 @@ export default function Login({ onLogin }) {
             <div className="fixed bottom-0 left-0 w-full h-8 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50 border-t border-gray-100">
                 <p className="text-gray-400 font-bold text-[10px] tracking-[0.3em] flex items-center gap-2 uppercase">
                     <span className="opacity-50">PRO</span>
-                    <span>Powered by Botivate</span>
+                    <span>Powered by Ace Mail</span>
                 </p>
             </div>
 
-            <p className="mt-16 text-xs text-slate-400 z-10 pb-16">© 2026 Botivate. All rights reserved.</p>
+            <p className="mt-16 text-xs text-slate-400 z-10 pb-16">© 2026 Ace Mail. All rights reserved.</p>
         </div>
     );
 }

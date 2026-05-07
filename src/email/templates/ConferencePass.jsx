@@ -67,7 +67,7 @@ export const ConferencePass = ({ data, onUpdate, onImageClick, uneditable }) => 
                                             />
                                         </div>
                                         <div style={{ marginBottom: '24px', color: confTheme.accent, fontWeight: '900', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase' }}>
-                                            {data.event || "BOTIVATE AI SUMMIT • 2026"}
+                                            {data.event || "ACE MAIL AI SUMMIT • 2026"}
                                         </div>
 
                                         <div style={{ width: '100%', height: '1px', backgroundColor: '#e2e8f0', margin: '32px 0' }}></div>

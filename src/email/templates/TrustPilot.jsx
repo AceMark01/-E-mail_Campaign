@@ -51,7 +51,7 @@ export const TrustPilot = ({ data, onUpdate, onImageClick, uneditable }) => {
                                     <div style={{ marginBottom: '40px' }}>
                                         <EditableText
                                             field="reviewText"
-                                            value={data.reviewText || "\"Botivate has completely redefined how we manage our internal communication. It's fast, intuitive, and genuinely delightful to use daily.\""}
+                                            value={data.reviewText || "\"Ace Mail has completely redefined how we manage our internal communication. It's fast, intuitive, and genuinely delightful to use daily.\""}
                                             onUpdate={onUpdate}
                                             uneditable={uneditable}
                                             style={{ fontSize: '24px', fontWeight: '800', fontStyle: 'italic', color: trustTheme.secondary, margin: 0, lineHeight: '1.4', letterSpacing: '-0.02em' }}

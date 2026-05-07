@@ -138,10 +138,10 @@ export default function Dashboard({ onLogout }) {
       popup.loading(`Preparing to send to ${targetUsers.length} recipient(s)...`, "Sending Campaign");
 
       try {
-        const hasFooter = message.includes('id="botivate-footer"');
+        const hasFooter = message.includes('id="ace-mail-footer"');
         const htmlBody = hasFooter ? message : `
         ${message}
-        <table id="botivate-footer" border="0" cellPadding="0" cellSpacing="0" width="100%" style="background-color: #0f172a; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">
+        <table id="ace-mail-footer" border="0" cellPadding="0" cellSpacing="0" width="100%" style="background-color: #0f172a; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">
             <tbody>
                 <tr>
                     <td style="padding: 50px 30px">
@@ -157,12 +157,12 @@ export default function Dashboard({ onLogout }) {
                                                             <div style="display: inline-block; background-color: #0c659f; padding: 8px; border-radius: 8px; margin-bottom: 10px">
                                                                 <span style="font-size: 20px; color: #ffffff; font-weight: bold">⚡</span>
                                                             </div>
-                                                            <span style="font-size: 20px; font-weight: bold; color: #ffffff; margin-left: 8px">Botivate</span>
+                                                            <span style="font-size: 20px; font-weight: bold; color: #ffffff; margin-left: 8px">Ace Mail</span>
                                                         </div>
                                                         <p style="font-size: 13px; line-height: 1.6; color: #94a3b8; margin: 0 0 20px 0">Automate. Manage. Scale.</p>
                                                         <p style="font-size: 13px; line-height: 1.6; color: #94a3b8; margin: 0 0 20px 0">Transforming businesses through cutting-edge AI automation solutions.</p>
                                                         <div style="margin-top: 20px">
-                                                            <p style="margin: 0 0 8px 0; font-size: 13px; color: #94a3b8"><span style="color: #0c659f">✉</span> info@botivate.in</p>
+                                                            <p style="margin: 0 0 8px 0; font-size: 13px; color: #94a3b8"><span style="color: #0c659f">✉</span> info@acemail.in</p>
                                                             <p style="margin: 0 0 8px 0; font-size: 13px; color: #94a3b8"><span style="color: #0c659f">📞</span> +919993023243</p>
                                                         </div>
                                                     </td>
@@ -179,7 +179,7 @@ export default function Dashboard({ onLogout }) {
                 <tr>
                   <td style="padding: 8px; background-color: #ffffff; border-top: 1px solid #f1f5f9; text-align: center;">
                     <p style="margin: 0; color: #94a3b8; font-size: 10px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase;">
-                      POWERED BY BOTIVATE
+                      POWERED BY ACE MAIL
                     </p>
                   </td>
                 </tr>
@@ -272,7 +272,7 @@ export default function Dashboard({ onLogout }) {
       <div className="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 p-4 z-40 flex justify-between items-center shadow-sm">
         <div className="flex items-center gap-2 text-sky-600">
           <Send className="w-6 h-6" />
-          <span className="text-xl font-bold tracking-tight">Botivate</span>
+          <span className="text-xl font-bold tracking-tight">Ace Mail</span>
         </div>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg">
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -293,7 +293,7 @@ export default function Dashboard({ onLogout }) {
                 <Send size={20} strokeWidth={2.5} />
               </div>
               <div>
-                <span className="text-xl font-black text-gray-900 tracking-tighter block mb-0">Botivate</span>
+                <span className="text-xl font-black text-gray-900 tracking-tighter block mb-0">Ace Mail</span>
                 <span className="text-[10px] font-black text-sky-500 uppercase tracking-widest leading-none">Campaign Pro</span>
               </div>
             </div>
@@ -481,7 +481,7 @@ export default function Dashboard({ onLogout }) {
         <div className="fixed bottom-0 left-0 w-full h-8 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50 border-t border-gray-100">
           <p className="text-gray-400 font-bold text-[10px] tracking-[0.3em] flex items-center gap-2 uppercase">
             <Sparkles size={12} className="text-sky-400/50" />
-            Powered by Botivate
+            Powered by Ace Mail
             <Sparkles size={12} className="text-pink-400/50" />
           </p>
         </div>
