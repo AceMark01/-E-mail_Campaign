@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Lock, CheckCircle, AlertCircle, ArrowRight, Loader2 } from 'lucide-react';
+import { Mail, Lock, CheckCircle, AlertCircle, ArrowRight, Loader2, Sparkles } from 'lucide-react';
 
 export default function Login({ onLogin }) {
     const [credentials, setCredentials] = useState({ username: '', password: '' });

@@ -157,9 +157,9 @@ export default function Dashboard({ onLogout }) {
                                                             <div style="display: inline-block; background-color: #0c659f; padding: 8px; border-radius: 8px; margin-bottom: 10px">
                                                                 <span style="font-size: 20px; color: #ffffff; font-weight: bold">⚡</span>
                                                             </div>
-                                                            <span style="font-size: 20px; font-weight: bold; color: #ffffff; margin-left: 8px">Ace Mail</span>
+                                                            <span style="font-size: 20px; font-weight: bold; color: #ffffff; margin-left: 8px">Botivate</span>
                                                         </div>
-                                                        <p style="font-size: 13px; line-height: 1.6; color: #94a3b8; margin: 0 0 20px 0">Automate. Manage. Scale.</p>
+                                                        <p style="font-size: 13px; line-height: 1.6; color: #94a3b8; margin: 0 0 20px 0">Botivate: Automate. Manage. Scale.</p>
                                                         <p style="font-size: 13px; line-height: 1.6; color: #94a3b8; margin: 0 0 20px 0">Transforming businesses through cutting-edge AI automation solutions.</p>
                                                         <div style="margin-top: 20px">
                                                             <p style="margin: 0 0 8px 0; font-size: 13px; color: #94a3b8"><span style="color: #0c659f">✉</span> info@acemail.in</p>

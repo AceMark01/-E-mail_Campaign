@@ -119,7 +119,7 @@ export const StandardHeader = ({ uneditable }) => (
             <tr>
                 <td align="center" style={{ padding: '20px 0' }}>
                     <a href="#" style={{ textDecoration: 'none', fontSize: '24px', fontWeight: 'bold', color: '#0c659f', fontFamily: 'sans-serif' }}>
-                        Ace Mail
+                        Botivate
                     </a>
                 </td>
             </tr>
@@ -148,7 +148,7 @@ export const StandardFooter = ({ uneditable }) => (
                                                         <div style={{ display: 'inline-block', backgroundColor: '#0c659f', padding: '8px', borderRadius: '0px', marginBottom: '10px' }}>
                                                             <span style={{ fontSize: '20px', color: '#ffffff', fontWeight: 'bold' }}>⚡</span>
                                                         </div>
-                                                        <span style={{ fontSize: '20px', fontWeight: 'bold', color: '#ffffff', marginLeft: '8px' }}>Ace Mail</span>
+                                                        <span style={{ fontSize: '20px', fontWeight: 'bold', color: '#ffffff', marginLeft: '8px' }}>Botivate</span>
                                                     </div>
                                                     <p style={{ fontSize: '13px', lineHeight: '1.6', color: '#94a3b8', margin: '0 0 20px 0' }}>
                                                         Automate. Manage. Scale.
@@ -227,7 +227,7 @@ export const StandardFooter = ({ uneditable }) => (
                                                 {/* Copyright & Links */}
                                                 <td valign="middle" align="left">
                                                     <p style={{ margin: '0 0 8px 0', fontSize: '12px', color: '#64748b' }}>
-                                                        © {new Date().getFullYear()} Ace Mail. All rights reserved. |
+                                                        © {new Date().getFullYear()} Botivate. All rights reserved. |
                                                         <a href="#" style={{ color: '#64748b', textDecoration: 'none', marginLeft: '5px' }}>Privacy Policy</a> |
                                                         <a href="#" style={{ color: '#64748b', textDecoration: 'none', marginLeft: '5px' }}>Terms of Service</a>
                                                     </p>
