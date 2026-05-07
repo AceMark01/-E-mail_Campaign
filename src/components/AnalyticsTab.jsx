@@ -183,21 +183,7 @@ export default function AnalyticsTab({ setActiveTab, startTargetedCampaign }) {
                             Recent Activity
                         </h3>
 
-                        {/* Quick Targeted Buttons */}
-                        <div className="flex items-center gap-3 sm:border-l sm:border-gray-200 sm:pl-6 shrink-0 flex-wrap">
-                            <button
-                                onClick={handleTargetUnopened}
-                                className="text-sm bg-amber-50 text-amber-700 px-4 py-2 rounded-xl font-bold hover:bg-amber-100 transition-colors flex items-center gap-2 border border-amber-200 shadow-sm"
-                            >
-                                <Sparkles size={16} /> Target Unopened
-                            </button>
-                            <button
-                                onClick={handleTargetReaders}
-                                className="text-sm bg-emerald-50 text-emerald-700 px-4 py-2 rounded-xl font-bold hover:bg-emerald-100 transition-colors flex items-center gap-2 border border-emerald-200 shadow-sm"
-                            >
-                                <Sparkles size={16} /> Reward Readers
-                            </button>
-                        </div>
+
                     </div>
 
                     {/* Filter Buttons */}
