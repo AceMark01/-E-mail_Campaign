@@ -37,68 +37,72 @@ export default function Login({ onLogin }) {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-pink-200 rounded-full blur-[100px] opacity-30 animate-in fade-in delay-500 duration-1000"></div>
             </div>
 
-            <div className="w-full max-w-md bg-white rounded-none shadow-2xl border border-slate-100 p-8 z-10 animate-in slide-in-from-bottom-8 duration-700">
-                <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-sky-50 text-sky-600 rounded-none mb-4 shadow-sm">
-                        <Mail size={32} />
+            <div className="w-full max-w-md bg-white/90 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-white p-8 z-10 animate-in slide-in-from-bottom-8 duration-700">
+                <div className="text-center mb-10">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-sky-100 to-indigo-100 text-sky-600 rounded-2xl mb-5 shadow-inner">
+                        <Mail size={32} strokeWidth={2.5} />
                     </div>
-                    <h1 className="text-2xl font-bold text-slate-900 mb-2 font-outfit uppercase tracking-tight">Login Portal</h1>
-                    <p className="text-slate-500 text-sm">Sign in to manage your Ace Mail campaigns</p>
+                    <h1 className="text-3xl font-black text-slate-900 mb-2 tracking-tight">Welcome Back</h1>
+                    <p className="text-slate-500 text-sm font-medium">Sign in to manage your Ace Mail campaigns</p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-5">
                     {error && (
-                        <div className="bg-red-50 text-red-600 p-3 rounded-none text-sm flex items-center gap-2 animate-in fade-in">
-                            <AlertCircle size={16} /> {error}
+                        <div className="bg-red-50 text-red-600 p-4 rounded-xl text-sm flex items-center gap-3 animate-in fade-in border border-red-100 shadow-sm">
+                            <AlertCircle size={18} className="shrink-0" /> {error}
                         </div>
                     )}
 
-                    <div className="space-y-1">
-                        <label className="text-xs font-bold text-slate-700 ml-1">Username / Email</label>
+                    <div className="space-y-1.5">
+                        <label className="text-sm font-bold text-slate-700 ml-1">Email Address</label>
                         <div className="relative group">
                             <input
                                 name="username"
                                 type="text"
-                                className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:bg-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all placeholder-slate-400"
-                                placeholder="Enter 'admin'"
+                                className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-medium focus:bg-white focus:ring-4 focus:ring-sky-50 focus:border-sky-400 outline-none transition-all placeholder-slate-400"
+                                placeholder="Enter your email"
                                 value={credentials.username}
                                 onChange={handleChange}
                                 required
                             />
-                            <Mail size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-sky-500 transition-colors" />
+                            <Mail size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-sky-500 transition-colors" />
                         </div>
                     </div>
 
-                    <div className="space-y-1">
-                        <label className="text-xs font-bold text-slate-700 ml-1">Password</label>
+                    <div className="space-y-1.5">
+                        <label className="text-sm font-bold text-slate-700 ml-1">Password</label>
                         <div className="relative group">
                             <input
                                 name="password"
                                 type="password"
-                                className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-none focus:bg-white focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all placeholder-slate-400"
-                                placeholder="Enter '123456'"
+                                className="w-full pl-11 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-medium focus:bg-white focus:ring-4 focus:ring-sky-50 focus:border-sky-400 outline-none transition-all placeholder-slate-400"
+                                placeholder="Enter your password"
                                 value={credentials.password}
                                 onChange={handleChange}
                                 required
                             />
-                            <Lock size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-sky-500 transition-colors" />
+                            <Lock size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-sky-500 transition-colors" />
                         </div>
                     </div>
 
-                    <div className="flex justify-end">
-                        <a href="#" className="text-xs font-semibold text-sky-600 hover:text-sky-700 transition-colors">Forgot Password?</a>
+                    <div className="flex justify-between items-center px-1">
+                        <label className="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" className="w-4 h-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500" />
+                            <span className="text-sm font-medium text-slate-600">Remember me</span>
+                        </label>
+                        <a href="#" className="text-sm font-bold text-sky-600 hover:text-sky-700 transition-colors">Forgot Password?</a>
                     </div>
 
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full py-4 bg-sky-600 text-white rounded-none font-bold text-lg hover:bg-sky-700 transition-all transform active:scale-[0.98] shadow-lg shadow-sky-200 flex justify-center items-center gap-2"
+                        className="w-full py-4 mt-2 bg-gradient-to-r from-sky-600 to-indigo-600 text-white rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-sky-200 transition-all transform active:scale-[0.98] flex justify-center items-center gap-2"
                     >
                         {loading ? <Loader2 size={24} className="animate-spin" /> : <>Sign In <ArrowRight size={20} /></>}
                     </button>
 
-                    <div className="pt-4 text-center">
-                        <p className="text-xs text-slate-400">Don't have an account? <a href="#" className="text-sky-600 font-bold hover:underline">Contact Sales</a></p>
+                    <div className="pt-6 text-center border-t border-slate-100">
+                        <p className="text-sm font-medium text-slate-500">Don't have an account? <a href="#" className="text-sky-600 font-bold hover:text-sky-700 transition-colors">Contact Sales</a></p>
                     </div>
                 </form>
             </div>
@@ -106,12 +110,12 @@ export default function Login({ onLogin }) {
             {/* --- STATIC SLIM FOOTER --- */}
             <div className="fixed bottom-0 left-0 w-full h-8 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50 border-t border-gray-100">
                 <p className="text-gray-400 font-bold text-[10px] tracking-[0.3em] flex items-center gap-2 uppercase">
-                    <span className="opacity-50">PRO</span>
-                    <span>Powered by Ace Mail</span>
+                    <Sparkles size={14} className="text-pink-400" />
+                    <span>Powered by Botivate</span>
                 </p>
             </div>
 
-            <p className="mt-16 text-xs text-slate-400 z-10 pb-16">© 2026 Ace Mail. All rights reserved.</p>
+            <p className="mt-16 text-xs text-slate-400 z-10 pb-16">© 2026 Botivate. All rights reserved.</p>
         </div>
     );
 }

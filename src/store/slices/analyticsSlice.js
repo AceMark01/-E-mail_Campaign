@@ -1,14 +1,34 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import API_URL from '../../config';
+import { googleScriptRequest } from '../../services/googleService';
 
 export const fetchAnalytics = createAsyncThunk('analytics/fetchAnalytics', async () => {
-    const response = await fetch(`${API_URL}/api/analytics`);
-    return await response.json();
+    const DAILY_LIMIT = 500;
+    const today = new Date().toISOString().split('T')[0];
+
+    let campaigns = await googleScriptRequest('getCampaigns');
+    if (!Array.isArray(campaigns)) campaigns = [];
+
+    const sent = campaigns.length;
+    const opened = campaigns.filter(c => c.opened).length;
+
+    const sentToday = campaigns.filter(c => {
+        if (!c.sentAt) return false;
+        const campaignDate = new Date(c.sentAt).toISOString().split('T')[0];
+        return campaignDate === today;
+    }).length;
+
+    const limitInfo = {
+        dailyLimit: DAILY_LIMIT,
+        usedToday: sentToday,
+        remaining: Math.max(0, DAILY_LIMIT - sentToday)
+    };
+
+    campaigns.sort((a, b) => new Date(b.sentAt) - new Date(a.sentAt));
+    return { sent, opened, campaigns, limitInfo };
 });
 
 export const syncStats = createAsyncThunk('analytics/syncStats', async () => {
-    const response = await fetch(`${API_URL}/api/sync-stats`);
-    return await response.json();
+    return await fetchAnalytics(); // Just refetch for sync
 });
 
 const analyticsSlice = createSlice({

@@ -1,32 +1,29 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import API_URL from '../../config';
+import { googleScriptRequest } from '../../services/googleService';
 
 export const fetchUsers = createAsyncThunk('audience/fetchUsers', async () => {
-    const response = await fetch(`${API_URL}/api/users`);
-    return await response.json();
+    let users = await googleScriptRequest('getUsers');
+    return Array.isArray(users) ? users : [];
 });
 
 export const addUser = createAsyncThunk('audience/addUser', async (userData) => {
-    const response = await fetch(`${API_URL}/api/users`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(userData),
-    });
-    return await response.json();
+    const newUser = {
+        id: Date.now().toString(),
+        ...userData,
+        status: userData.status || "Active"
+    };
+    await googleScriptRequest('addUser', newUser);
+    return newUser;
 });
 
 export const updateUser = createAsyncThunk('audience/updateUser', async (userData) => {
     const { id, ...data } = userData;
-    const response = await fetch(`${API_URL}/api/users/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-    });
-    return await response.json();
+    await googleScriptRequest('updateUser', data, id);
+    return userData;
 });
 
 export const deleteUser = createAsyncThunk('audience/deleteUser', async (id) => {
-    await fetch(`${API_URL}/api/users/${id}`, { method: 'DELETE' });
+    await googleScriptRequest('deleteUser', null, id);
     return id;
 });
 

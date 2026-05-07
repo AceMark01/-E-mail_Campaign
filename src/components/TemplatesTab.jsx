@@ -496,7 +496,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
       <header className="mb-6 max-w-6xl mx-auto space-y-4">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-none bg-sky-50 border border-sky-100 text-sky-700 text-[10px] font-bold uppercase tracking-wide shadow-sm mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-sky-50 border border-sky-100 text-sky-700 text-[10px] font-bold uppercase tracking-wide shadow-sm mb-2">
               <Sparkles size={12} />
               <span>Premium Library</span>
             </div>
@@ -515,13 +515,13 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-none text-xs focus:outline-none focus:ring-2 focus:ring-sky-100 transition-all font-medium"
+                className="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-sky-100 transition-all font-medium"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
             <select
-              className="px-3 py-2 bg-white border border-slate-200 rounded-none text-xs font-bold text-slate-600 focus:outline-none focus:ring-2 focus:ring-sky-100"
+              className="px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-600 focus:outline-none focus:ring-2 focus:ring-sky-100"
               value={activeCategory}
               onChange={(e) => setActiveCategory(e.target.value)}
             >
@@ -535,10 +535,10 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-7xl mx-auto pb-20">
         {/* BLANK TEMPLATE OPTION */}
         <div
-          className="group relative bg-white rounded-none border-2 border-dashed border-slate-200 hover:border-sky-300 hover:bg-slate-50 transition-all duration-300 cursor-pointer flex flex-col items-center justify-center p-8 text-center"
+          className="group relative bg-white rounded-xl border-2 border-dashed border-slate-200 hover:border-sky-300 hover:bg-slate-50 transition-all duration-300 cursor-pointer flex flex-col items-center justify-center p-8 text-center"
           onClick={() => onUseTemplate({ subject: "New Campaign", message: "<div>Start typing your message here...</div>", templateId: null, data: {} })}
         >
-          <div className="w-16 h-16 bg-white rounded-none shadow-sm border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-sky-600 group-hover:scale-110 transition-all mb-4">
+          <div className="w-16 h-16 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center text-slate-400 group-hover:text-sky-600 group-hover:scale-110 transition-all mb-4">
             <Plus size={32} />
           </div>
           <h3 className="font-bold text-slate-800">Blank Email</h3>
@@ -552,7 +552,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
           return (
             <div
               key={t.id}
-              className="group relative bg-white rounded-none border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-100 hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden flex flex-col"
+              className="group relative bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-sky-100 hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden flex flex-col"
               onMouseEnter={() => setHoveredTemplateId(t.id)}
               onMouseLeave={() => setHoveredTemplateId(null)}
             >
@@ -564,7 +564,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                 {/* Scaled Preview */}
                 <div className="absolute inset-0 flex items-start justify-center p-2 overflow-hidden">
                   <div className="origin-top transform scale-[0.28] w-[600px]" style={{ transformOrigin: 'top center' }}>
-                    <div className="bg-white shadow-lg rounded-none overflow-hidden border border-slate-100">
+                    <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-slate-100">
                       <PromotionTemplate layoutType={data.layoutType} data={data} uneditable={true} />
                     </div>
                   </div>
@@ -577,7 +577,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                       e.stopPropagation();
                       setEditingTemplateId(t.id);
                     }}
-                    className="bg-white text-slate-900 w-32 py-2 rounded-none text-xs font-bold shadow-lg flex items-center justify-center gap-1.5 transform transition-transform hover:scale-105"
+                    className="bg-white text-slate-900 w-32 py-2 rounded-xl text-xs font-bold shadow-lg flex items-center justify-center gap-1.5 transform transition-transform hover:scale-105"
                   >
                     <Edit3 size={12} /> Customize
                   </button>
@@ -586,7 +586,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                       e.stopPropagation();
                       handleExport(t.id);
                     }}
-                    className="bg-sky-600 text-white w-32 py-2 rounded-none text-xs font-bold shadow-lg flex items-center justify-center gap-1.5 transform transition-transform hover:scale-105 hover:bg-sky-500"
+                    className="bg-sky-600 text-white w-32 py-2 rounded-xl text-xs font-bold shadow-lg flex items-center justify-center gap-1.5 transform transition-transform hover:scale-105 hover:bg-sky-500"
                   >
                     <CheckCircle size={12} /> Select
                   </button>
@@ -599,7 +599,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                   <h3 className="font-bold text-slate-800 text-sm leading-tight truncate">{t.name}</h3>
                   <p className="text-slate-400 text-[10px] uppercase font-bold tracking-wider mt-0.5 truncate">{t.idealFor}</p>
                 </div>
-                <div className="bg-slate-50 p-1.5 rounded-none text-slate-300 group-hover:text-sky-600 group-hover:bg-sky-50 transition-colors">
+                <div className="bg-slate-50 p-1.5 rounded-xl text-slate-300 group-hover:text-sky-600 group-hover:bg-sky-50 transition-colors">
                   <ArrowRight size={14} />
                 </div>
               </div>
@@ -623,7 +623,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setEditingTemplateId(null)}
-                className="p-2 -ml-2 hover:bg-slate-100 rounded-none text-slate-500 transition-colors"
+                className="p-2 -ml-2 hover:bg-slate-100 rounded-xl text-slate-500 transition-colors"
               >
                 <X size={24} />
               </button>
@@ -631,7 +631,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
               <div>
                 <h2 className="text-lg font-bold text-slate-800 flex items-center gap-2">
                   {BRANDED_TEMPLATES.find(t => t.id === editingTemplateId)?.name}
-                  <span className="px-2 py-0.5 rounded-none text-[10px] font-bold bg-sky-100 text-sky-700 uppercase tracking-wider hidden sm:inline-block">Editing</span>
+                  <span className="px-2 py-0.5 rounded-xl text-[10px] font-bold bg-sky-100 text-sky-700 uppercase tracking-wider hidden sm:inline-block">Editing</span>
                 </h2>
               </div>
             </div>
@@ -643,14 +643,14 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
               <button
                 onClick={handleDownloadPDF}
                 disabled={isDownloading}
-                className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-4 py-2.5 rounded-none text-xs font-bold shadow-sm flex items-center gap-2 transition-all"
+                className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-4 py-2.5 rounded-xl text-xs font-bold shadow-sm flex items-center gap-2 transition-all"
               >
                 {isDownloading ? <span className="animate-spin">⏳</span> : <ArrowDown size={14} />}
                 Download PDF
               </button>
               <button
                 onClick={() => handleExport(editingTemplateId)}
-                className="bg-sky-600 hover:bg-sky-700 text-white pl-4 pr-5 py-2.5 rounded-none font-bold shadow-md shadow-sky-200 flex items-center gap-2 transition-all active:scale-95 group"
+                className="bg-sky-600 hover:bg-sky-700 text-white pl-4 pr-5 py-2.5 rounded-xl font-bold shadow-md shadow-sky-200 flex items-center gap-2 transition-all active:scale-95 group"
               >
                 <span>Use Template</span>
                 <ArrowRight size={18} className="text-sky-200 group-hover:text-white transition-colors" />
@@ -709,7 +709,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                       const isOpen = activeSection === group.id;
 
                       return (
-                        <div key={group.id} className="border border-slate-200 rounded-none overflow-hidden bg-white shadow-sm transition-all duration-300">
+                        <div key={group.id} className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm transition-all duration-300">
                           {/* Accordion Header */}
                           <div
                             onClick={() => setActiveSection(isOpen ? null : group.id)}
@@ -734,11 +734,11 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                                   {group.id === 'media' ? (
                                     <div className="flex flex-col gap-2">
                                       {templateData[field] && (
-                                        <img src={templateData[field]} alt={field} className="w-full h-24 object-cover rounded-none border border-slate-200 bg-slate-50" />
+                                        <img src={templateData[field]} alt={field} className="w-full h-24 object-cover rounded-xl border border-slate-200 bg-slate-50" />
                                       )}
                                       <button
                                         onClick={() => triggerImage(editingTemplateId, field)}
-                                        className="w-full py-2 bg-slate-50 border border-slate-200 border-dashed rounded-none text-xs font-bold text-slate-500 hover:text-sky-600 hover:border-sky-300 hover:bg-sky-50 transition-all flex items-center justify-center gap-2"
+                                        className="w-full py-2 bg-slate-50 border border-slate-200 border-dashed rounded-xl text-xs font-bold text-slate-500 hover:text-sky-600 hover:border-sky-300 hover:bg-sky-50 transition-all flex items-center justify-center gap-2"
                                       >
                                         <ImageIcon size={12} /> Replace Image
                                       </button>
@@ -748,7 +748,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                                       rows={field.toLowerCase().includes('content') || field.toLowerCase().includes('desc') ? 3 : 1}
                                       value={templateData[field] || ''}
                                       onChange={(e) => handleUpdate(editingTemplateId, field, e.target.value)}
-                                      className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-none text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all text-slate-700 placeholder-slate-400 resize-none font-mono"
+                                      className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all text-slate-700 placeholder-slate-400 resize-none font-mono"
                                       placeholder={`Enter ${field}...`}
                                     />
                                   )}
@@ -770,37 +770,37 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                     <div className="grid grid-cols-2 gap-2">
                       {/* WRAP BUTTONS IN DRAGGABLE ITEM */}
                       <DraggableSidebarItem type="text" onClick={() => handleAddBlock('text')}>
-                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-none flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
+                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-xl flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
                           <Type size={18} /> <span className="text-[10px] font-bold uppercase">Text</span>
                         </div>
                       </DraggableSidebarItem>
 
                       <DraggableSidebarItem type="heading" onClick={() => handleAddBlock('heading')}>
-                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-none flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
+                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-xl flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
                           <Type size={22} className="font-black" /> <span className="text-[10px] font-bold uppercase">Heading</span>
                         </div>
                       </DraggableSidebarItem>
 
                       <DraggableSidebarItem type="image" onClick={() => handleAddBlock('image')}>
-                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-none flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
+                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-xl flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
                           <ImageIcon size={18} /> <span className="text-[10px] font-bold uppercase">Image</span>
                         </div>
                       </DraggableSidebarItem>
 
                       <DraggableSidebarItem type="button" onClick={() => handleAddBlock('button')}>
-                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-none flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
-                          <div className="w-5 h-3 bg-current rounded-sm border border-current"></div> <span className="text-[10px] font-bold uppercase">Button</span>
+                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-xl flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
+                          <div className="w-5 h-3 bg-current rounded-lg border border-current"></div> <span className="text-[10px] font-bold uppercase">Button</span>
                         </div>
                       </DraggableSidebarItem>
 
                       <DraggableSidebarItem type="divider" onClick={() => handleAddBlock('divider')}>
-                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-none flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
+                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-xl flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
                           <Minus size={18} /> <span className="text-[10px] font-bold uppercase">Divider</span>
                         </div>
                       </DraggableSidebarItem>
 
                       <DraggableSidebarItem type="spacer" onClick={() => handleAddBlock('spacer')}>
-                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-none flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
+                        <div className="p-3 bg-slate-50 hover:bg-white border border-slate-200 hover:border-sky-200 hover:shadow-md rounded-xl flex flex-col items-center gap-1 transition-all text-slate-600 hover:text-sky-600 cursor-grab active:cursor-grabbing">
                           <Layout size={18} /> <span className="text-[10px] font-bold uppercase">Spacer</span>
                         </div>
                       </DraggableSidebarItem>
@@ -821,7 +821,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                             <div className="font-bold text-slate-600 uppercase flex items-center gap-2">
                               {block.type === 'text' && <Type size={12} />}
                               {block.type === 'image' && <ImageIcon size={12} />}
-                              {block.type === 'button' && <div className="w-3 h-2 bg-slate-400 rounded-sm"></div>}
+                              {block.type === 'button' && <div className="w-3 h-2 bg-slate-400 rounded-lg"></div>}
                               {block.type}
                             </div>
                             <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">

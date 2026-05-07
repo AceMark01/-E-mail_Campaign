@@ -280,7 +280,7 @@ export const StandardFooter = ({ uneditable }) => (
                     textAlign: 'center'
                 }}>
                     <p style={{ margin: 0, color: '#94a3b8', fontSize: '10px', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase' }}>
-                        POWERED BY ACE MAIL
+                        POWERED BY BOTIVATE
                     </p>
                 </td>
             </tr>
