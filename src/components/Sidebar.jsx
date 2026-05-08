@@ -8,6 +8,7 @@ const Sidebar = () => {
         { icon: <Users size={20} />, label: 'Audience', active: false },
         { icon: <Settings size={20} />, label: 'Settings', active: false },
     ];
+    
 
     return (
         <aside className="w-64 bg-slate-900 text-white min-h-screen hidden md:flex flex-col shadow-xl">
