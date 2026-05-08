@@ -1,7 +1,7 @@
 import React from "react";
 
 export const EditableText = ({ field, value, placeholder, className, isHeader, uneditable, onUpdate, style: incomingStyle }) => {
-    const Tag = isHeader ? "h1" : "p";
+    const Tag = isHeader ? "h1" : "div";
     const baseStyle = {
         margin: 0, // Reset default margins for emails
         ...incomingStyle

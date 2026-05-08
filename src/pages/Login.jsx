@@ -20,7 +20,7 @@ export default function Login({ onLogin }) {
 
         if (credentials.username === 'admin' && credentials.password === '123456') {
             // Success
-            localStorage.setItem('ace_mail_user', JSON.stringify({ name: 'Admin User', role: 'admin' }));
+            localStorage.setItem('botivate_mail_session', JSON.stringify({ name: 'Admin User', role: 'admin' }));
             onLogin();
         } else {
             setError("Invalid credentials. Please try again.");
@@ -39,8 +39,8 @@ export default function Login({ onLogin }) {
 
             <div className="w-full max-w-md bg-white/90 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-white p-8 z-10 animate-in slide-in-from-bottom-8 duration-700">
                 <div className="text-center mb-10">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-tr from-sky-100 to-indigo-100 text-sky-600 rounded-2xl mb-5 shadow-inner">
-                        <Mail size={32} strokeWidth={2.5} />
+                    <div className="inline-flex items-center justify-center mb-5">
+                        <img src="/src/assets/acelogo.png" alt="Ace Mail Logo" className="h-16 w-auto object-contain" />
                     </div>
                     <h1 className="text-3xl font-black text-slate-900 mb-2 tracking-tight">Welcome Back</h1>
                     <p className="text-slate-500 text-sm font-medium">Sign in to manage your Ace Mail campaigns</p>
@@ -85,14 +85,6 @@ export default function Login({ onLogin }) {
                         </div>
                     </div>
 
-                    <div className="flex justify-between items-center px-1">
-                        <label className="flex items-center gap-2 cursor-pointer">
-                            <input type="checkbox" className="w-4 h-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500" />
-                            <span className="text-sm font-medium text-slate-600">Remember me</span>
-                        </label>
-                        <a href="#" className="text-sm font-bold text-sky-600 hover:text-sky-700 transition-colors">Forgot Password?</a>
-                    </div>
-
                     <button
                         type="submit"
                         disabled={loading}
@@ -100,10 +92,6 @@ export default function Login({ onLogin }) {
                     >
                         {loading ? <Loader2 size={24} className="animate-spin" /> : <>Sign In <ArrowRight size={20} /></>}
                     </button>
-
-                    <div className="pt-6 text-center border-t border-slate-100">
-                        <p className="text-sm font-medium text-slate-500">Don't have an account? <a href="#" className="text-sky-600 font-bold hover:text-sky-700 transition-colors">Contact Sales</a></p>
-                    </div>
                 </form>
             </div>
 
@@ -111,11 +99,11 @@ export default function Login({ onLogin }) {
             <div className="fixed bottom-0 left-0 w-full h-8 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50 border-t border-gray-100">
                 <p className="text-gray-400 font-bold text-[10px] tracking-[0.3em] flex items-center gap-2 uppercase">
                     <Sparkles size={14} className="text-pink-400" />
-                    <span>Powered by Botivate</span>
+                    <span>Powered by Ace Mail</span>
                 </p>
             </div>
 
-            <p className="mt-16 text-xs text-slate-400 z-10 pb-16">© 2026 Botivate. All rights reserved.</p>
+            <p className="mt-16 text-xs text-slate-400 z-10 pb-16">© 2026 Ace Mail. All rights reserved.</p>
         </div>
     );
 }

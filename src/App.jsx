@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     // Check for existing session
-    const user = localStorage.getItem('ace_mail_user');
+    const user = localStorage.getItem('botivate_mail_session');
     if (user) {
       setIsAuthenticated(true);
       setCurrentView('dashboard');
@@ -21,7 +21,7 @@ function App() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('ace_mail_user');
+    localStorage.removeItem('botivate_mail_session');
     setIsAuthenticated(false);
     setCurrentView('login');
   };

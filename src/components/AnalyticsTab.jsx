@@ -44,7 +44,7 @@ export default function AnalyticsTab({ setActiveTab, startTargetedCampaign }) {
                 <div>
                     <h2 className="text-xl font-black text-gray-900 tracking-tight flex items-center gap-2">
                         Performance Metrics
-                        <span className="text-xs font-bold bg-sky-100 text-sky-700 px-2 py-0.5 rounded-none">Live</span>
+                        <span className="text-xs font-bold bg-sky-100 text-sky-700 px-2 py-0.5 rounded-2xl">Live</span>
                     </h2>
                     <p className="text-gray-500 text-sm font-medium">Tracking delivery and engagement across all channels</p>
                 </div>
@@ -227,7 +227,7 @@ export default function AnalyticsTab({ setActiveTab, startTargetedCampaign }) {
                                 <tr>
                                     <td colSpan="4" className="text-center py-24 bg-gray-50/20">
                                         <div className="flex flex-col items-center gap-4 text-gray-300">
-                                            <div className="w-20 h-20 rounded-none border border-dashed border-gray-200 flex items-center justify-center text-gray-200">
+                                            <div className="w-20 h-20 rounded-2xl border border-dashed border-gray-200 flex items-center justify-center text-gray-200">
                                                 <BarChart3 size={40} strokeWidth={1} />
                                             </div>
                                             <div className="text-center">
@@ -264,17 +264,17 @@ export default function AnalyticsTab({ setActiveTab, startTargetedCampaign }) {
                                         <td className="px-8 py-5 text-right">
                                             {c.opened ? (
                                                 <div className="flex flex-col items-end gap-1">
-                                                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-none text-[10px] font-black bg-emerald-100 text-emerald-700 uppercase tracking-wider">
+                                                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-2xl text-[10px] font-black bg-emerald-100 text-emerald-700 uppercase tracking-wider">
                                                         <span className="relative flex h-1.5 w-1.5">
-                                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-none bg-emerald-400 opacity-75"></span>
-                                                            <span className="relative inline-flex rounded-none h-1.5 w-1.5 bg-emerald-500"></span>
+                                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-2xl bg-emerald-400 opacity-75"></span>
+                                                            <span className="relative inline-flex rounded-2xl h-1.5 w-1.5 bg-emerald-500"></span>
                                                         </span>
                                                         Interacted
                                                     </span>
                                                     <span className="text-[9px] text-gray-400 font-bold uppercase tracking-tighter">Opened {new Date(c.openedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
                                                 </div>
                                             ) : (
-                                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-none text-[10px] font-black bg-gray-100 text-gray-400 uppercase tracking-wider">
+                                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-2xl text-[10px] font-black bg-gray-100 text-gray-400 uppercase tracking-wider">
                                                     <Mail size={12} strokeWidth={3} />
                                                     Pending
                                                 </span>

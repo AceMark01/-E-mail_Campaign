@@ -168,7 +168,7 @@ export default function AudienceTab({
                                             <div className="text-xs text-gray-400 mt-1 pl-4">System Authenticated</div>
                                         </td>
                                         <td className="px-6 py-4 text-right">
-                                            <div className="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0">
+                                            <div className="flex justify-end gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all md:translate-x-4 md:group-hover:translate-x-0">
                                                 <button onClick={() => startEditingUser(u)} className="p-2.5 bg-white border border-gray-200 rounded-xl hover:text-sky-600 text-gray-500 hover:shadow-md hover:border-sky-200 transition-all active:scale-95" title="Modify Record"><Edit2 size={16} /></button>
                                                 <button onClick={() => {
                                                     if (confirm("Delete this subscriber permanently?")) {

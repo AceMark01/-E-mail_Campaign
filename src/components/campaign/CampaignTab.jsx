@@ -124,8 +124,8 @@ export default function CampaignTab({
                         </div>
                     </div>
 
-                    {/* Footer Actions */}
-                    <div className="bg-gray-50 p-5 border-t border-gray-200">
+                    {/* Footer Actions - Sticky on mobile */}
+                    <div className="bg-gray-50/95 backdrop-blur-sm p-5 border-t border-gray-200 sticky bottom-0 z-20">
                         {selectedUserIds.length > 0 ? (
                             <button onClick={() => { const targets = users.filter(u => selectedUserIds.includes(u.id)); onSendCampaign(targets, "Selected Bulk"); }} className="w-full py-4 bg-sky-600 text-white rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-sky-700 transition-all shadow-md active:scale-[0.99]"><Send size={18} /> Send to ({selectedUserIds.length}) Recipients</button>
                         ) : (

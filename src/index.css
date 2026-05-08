@@ -6,26 +6,8 @@
 @tailwind utilities;
 
 @layer base {
-
-    /* Target main UI components for the "sharp but slightly soft" 4px look */
-    button,
-    input,
-    select,
-    textarea,
-    [class*="bg-white"],
-    [class*="border"],
-    [class*="shadow"],
-    .rounded-none,
-    .rounded-xl,
-    .rounded-2xl,
-    .rounded-3xl,
-    .rounded-lg {
-        border-radius: 4px !important;
-    }
-
-    /* Ensure intended circles remain circles */
-    .rounded-full {
-        border-radius: 9999px !important;
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased;
     }
 }
 

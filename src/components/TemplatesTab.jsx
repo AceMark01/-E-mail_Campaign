@@ -94,11 +94,14 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
   );
 
 
-  // Reset canvas when opening a new template
+  const [mobileView, setMobileView] = useState("edit"); // "edit" or "preview"
+
+  // Reset canvas and view when opening a new template
   React.useEffect(() => {
     if (editingTemplateId) {
       setZoom(0.85);
       setPan({ x: 0, y: 0 });
+      setMobileView("edit");
     }
   }, [editingTemplateId]);
 
@@ -134,11 +137,16 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
   }, [editingTemplateId]);
 
   const startPan = (e) => {
-    // Don't trigger pan if clicking inputs or buttons inside the mock browser
     if (e.target.closest('button') || e.target.closest('input')) return;
-
     setIsDragging(true);
     setDragStart({ x: e.clientX - pan.x, y: e.clientY - pan.y });
+  };
+
+  const startTouchPan = (e) => {
+    if (e.target.closest('button') || e.target.closest('input')) return;
+    setIsDragging(true);
+    const touch = e.touches[0];
+    setDragStart({ x: touch.clientX - pan.x, y: touch.clientY - pan.y });
   };
 
   const doPan = (e) => {
@@ -146,6 +154,15 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
     setPan({
       x: e.clientX - dragStart.x,
       y: e.clientY - dragStart.y
+    });
+  };
+
+  const doTouchPan = (e) => {
+    if (!isDragging) return;
+    const touch = e.touches[0];
+    setPan({
+      x: touch.clientX - dragStart.x,
+      y: touch.clientY - dragStart.y
     });
   };
 
@@ -570,8 +587,8 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                   </div>
                 </div>
 
-                {/* Hover Overlay */}
-                <div className={`absolute inset-0 bg-slate-900/40 backdrop-blur-[1px] transition-all duration-200 flex flex-col items-center justify-center gap-2 ${isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                {/* Hover Overlay - Visible by default on mobile, hover-only on desktop */}
+                <div className={`absolute inset-0 bg-slate-900/40 backdrop-blur-[1px] transition-all duration-200 flex flex-col items-center justify-center gap-2 ${isHovered ? 'opacity-100' : 'opacity-100 md:opacity-0 md:pointer-events-none'} pointer-events-auto md:group-hover:opacity-100 md:group-hover:pointer-events-auto`}>
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
@@ -629,31 +646,29 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
               </button>
               <div className="h-6 w-px bg-slate-200 hidden sm:block"></div>
               <div>
-                <h2 className="text-lg font-bold text-slate-800 flex items-center gap-2">
+                <h2 className="text-base sm:text-lg font-bold text-slate-800 flex items-center gap-2 truncate max-w-[120px] sm:max-w-none">
                   {BRANDED_TEMPLATES.find(t => t.id === editingTemplateId)?.name}
                   <span className="px-2 py-0.5 rounded-xl text-[10px] font-bold bg-sky-100 text-sky-700 uppercase tracking-wider hidden sm:inline-block">Editing</span>
                 </h2>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-slate-400 font-medium hidden md:inline-block mr-2">
-                Changes saved automatically
-              </span>
+            <div className="flex items-center gap-2">
               <button
                 onClick={handleDownloadPDF}
                 disabled={isDownloading}
-                className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-4 py-2.5 rounded-xl text-xs font-bold shadow-sm flex items-center gap-2 transition-all"
+                className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 p-2.5 rounded-xl text-xs font-bold shadow-sm flex items-center gap-2 transition-all"
+                title="Download PDF"
               >
-                {isDownloading ? <span className="animate-spin">⏳</span> : <ArrowDown size={14} />}
-                Download PDF
+                {isDownloading ? <span className="animate-spin text-[10px]">⏳</span> : <ArrowDown size={16} />}
+                <span className="hidden sm:inline">PDF</span>
               </button>
               <button
                 onClick={() => handleExport(editingTemplateId)}
-                className="bg-sky-600 hover:bg-sky-700 text-white pl-4 pr-5 py-2.5 rounded-xl font-bold shadow-md shadow-sky-200 flex items-center gap-2 transition-all active:scale-95 group"
+                className="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2.5 rounded-xl font-bold shadow-md shadow-sky-200 flex items-center gap-2 transition-all active:scale-95 group text-xs"
               >
                 <span>Use Template</span>
-                <ArrowRight size={18} className="text-sky-200 group-hover:text-white transition-colors" />
+                <ArrowRight size={16} className="text-sky-200 group-hover:text-white transition-colors hidden sm:inline" />
               </button>
             </div>
           </header>
@@ -665,10 +680,27 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
             onDragStart={handleDragStart}
             onDragEnd={handleDragEnd}
           >
+            {/* Mobile View Toggle */}
+            <div className="md:hidden flex bg-white border-b border-slate-200 p-2 gap-2">
+                <button 
+                  onClick={() => setMobileView("edit")}
+                  className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${mobileView === 'edit' ? 'bg-sky-50 text-sky-700 shadow-inner border border-sky-100' : 'text-slate-500'}`}
+                >
+                  Edit Settings
+                </button>
+                <button 
+                  onClick={() => setMobileView("preview")}
+                  className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${mobileView === 'preview' ? 'bg-sky-50 text-sky-700 shadow-inner border border-sky-100' : 'text-slate-500'}`}
+                >
+                  View Preview
+                </button>
+            </div>
+
             <div className="flex-1 overflow-hidden flex flex-col md:flex-row h-full">
 
               {/* --- CUSTOMIZATION SIDEBAR --- */}
-              <div className="w-full md:w-80 bg-white border-r border-slate-200 overflow-y-auto flex-none z-10 shadow-sm custom-scrollbar">
+              <div className={`w-full md:w-80 bg-white border-r border-slate-200 overflow-y-auto flex-1 md:flex-none z-10 shadow-sm custom-scrollbar ${mobileView === 'edit' ? 'block' : 'hidden md:block'}`}>
+
                 <div className="p-4 border-b border-slate-100 bg-slate-50/50 sticky top-0 z-20 backdrop-blur-sm">
                   <h3 className="font-bold text-slate-900 flex items-center gap-2">
                     <Settings size={16} className="text-slate-400" />
@@ -824,7 +856,7 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
                               {block.type === 'button' && <div className="w-3 h-2 bg-slate-400 rounded-lg"></div>}
                               {block.type}
                             </div>
-                            <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="flex items-center gap-1 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
                               <button onClick={() => handleMoveBlock(i, -1)} className="p-1 hover:bg-slate-200 rounded text-slate-500"><ArrowUp size={12} /></button>
                               <button onClick={() => handleMoveBlock(i, 1)} className="p-1 hover:bg-slate-200 rounded text-slate-500"><ArrowDown size={12} /></button>
                               <button onClick={() => handleRemoveBlock(i)} className="p-1 hover:bg-red-100 rounded text-red-500"><Trash2 size={12} /></button>
@@ -839,11 +871,14 @@ export default function TemplatesTab({ onUseTemplate, initialEditingState }) {
 
               {/* --- PREVIEW AREA (CANVAS) --- */}
               <div
-                className="flex-1 bg-slate-100/50 relative overflow-hidden cursor-grab active:cursor-grabbing"
+                className={`flex-1 bg-slate-100/50 relative overflow-hidden cursor-grab active:cursor-grabbing ${mobileView === 'preview' ? 'block' : 'hidden md:block'}`}
                 onMouseDown={startPan}
                 onMouseMove={doPan}
                 onMouseUp={endPan}
                 onMouseLeave={endPan}
+                onTouchStart={startTouchPan}
+                onTouchMove={doTouchPan}
+                onTouchEnd={endPan}
                 style={{
                   backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)',
                   backgroundSize: '20px 20px'

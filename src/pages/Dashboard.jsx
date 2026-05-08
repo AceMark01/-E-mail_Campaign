@@ -288,10 +288,8 @@ export default function Dashboard({ onLogout }) {
 
       {/* MOBILE HEADER */}
       <div className="md:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-100 p-4 z-40 flex justify-between items-center shadow-sm">
-        <div className="flex items-center gap-2 text-sky-600">
-          <div className="p-2 bg-gradient-to-tr from-sky-500 to-indigo-500 rounded-lg text-white shadow-md">
-            <Send className="w-5 h-5" />
-          </div>
+        <div className="flex items-center gap-2">
+          <img src="/src/assets/acelogo.png" alt="Ace Mail" className="h-8 w-auto" />
           <span className="text-xl font-bold tracking-tight text-gray-900">Ace Mail</span>
         </div>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-gray-600 hover:bg-gray-100 rounded-xl transition-colors">
@@ -309,9 +307,7 @@ export default function Dashboard({ onLogout }) {
         <div className="flex flex-col h-full">
           <div className="p-8 mb-4">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-tr from-sky-500 to-indigo-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-sky-200 group-hover:scale-105 transition-transform">
-                <Send size={24} strokeWidth={2.5} />
-              </div>
+              <img src="/src/assets/acelogo.png" alt="Ace Mail" className="h-12 w-auto" />
               <div>
                 <span className="text-2xl font-black text-gray-900 tracking-tight block">Ace Mail</span>
                 <span className="text-xs font-semibold text-sky-500 uppercase tracking-wider">Pro Dashboard</span>
@@ -354,7 +350,7 @@ export default function Dashboard({ onLogout }) {
       {/* MAIN CONTENT */}
       <main className="flex-1 flex flex-col p-4 md:p-10 mt-16 md:mt-0 overflow-hidden relative">
         {/* Subtle Background Glow */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-50/50 rounded-none blur-[120px] -z-10 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-50/50 rounded-2xl blur-[120px] -z-10 pointer-events-none"></div>
 
         <header className="mb-10 flex flex-col md:flex-row md:items-center justify-between gap-6 shrink-0 mt-6 md:mt-0">
           <div>
@@ -414,19 +410,19 @@ export default function Dashboard({ onLogout }) {
 
           {activeTab === 'campaigns' && (
             <div className="space-y-6 relative">
-              <div className="flex justify-between items-center bg-white p-4 rounded-none shadow-sm border border-gray-100">
+              <div className="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
                 <div><h2 className="text-lg font-bold text-gray-900">Live Transmission Logs</h2><p className="text-sm text-gray-500">Real-time delivery tracking</p></div>
                 {stats.campaigns.length > 0 && (
                   <button onClick={() => { if (confirm("Clear live logs?")) { /* Logic to clear logs if needed */ } }} className="text-red-500 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2"><Trash2 size={14} /> Clear Log</button>
                 )}
               </div>
               {stats.campaigns.length === 0 ? (
-                <div className="text-center py-20 bg-white rounded-none border border-dashed border-gray-200">
-                  <div className="bg-gray-50 w-16 h-16 rounded-none flex items-center justify-center mx-auto mb-4"><History className="text-gray-400" size={32} /></div>
+                <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-gray-200">
+                  <div className="bg-gray-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"><History className="text-gray-400" size={32} /></div>
                   <h3 className="text-gray-900 font-bold">No transmissions yet</h3>
                 </div>
               ) : (
-                <div className="bg-white rounded-none shadow-sm border border-gray-100 overflow-hidden overflow-x-auto">
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden overflow-x-auto">
                   <table className="w-full text-sm text-left">
                     <thead className="bg-gray-50 text-gray-500 uppercase text-xs"><tr><th className="px-6 py-4 font-semibold">Recipient</th><th className="px-6 py-4 font-semibold">Subject</th><th className="px-6 py-4 font-semibold">Time</th><th className="px-6 py-4 font-semibold text-right">Status</th></tr></thead>
                     <tbody className="divide-y divide-gray-100">
@@ -442,7 +438,7 @@ export default function Dashboard({ onLogout }) {
                   </table>
                 </div>
               )}
-              <button onClick={() => switchTab('templates')} className="fixed bottom-24 right-8 w-16 h-16 bg-sky-600 text-white rounded-none shadow-2xl flex items-center justify-center hover:bg-sky-700 transition-all z-30 group"><Send className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></button>
+              <button onClick={() => switchTab('templates')} className="fixed bottom-24 right-8 w-16 h-16 bg-sky-600 text-white rounded-2xl shadow-2xl flex items-center justify-center hover:bg-sky-700 transition-all z-30 group"><Send className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></button>
             </div>
           )}
 

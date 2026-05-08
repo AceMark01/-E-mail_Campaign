@@ -109,12 +109,12 @@ export const NewsletterModern = ({ data, onUpdate, onImageClick, uneditable }) =
                                                     </div>
                                                 </td>
                                                 <td style={{ paddingLeft: '24px' }} valign="middle">
-                                                    <h4 style={{ margin: '0 0 8px 0', fontSize: '18px', fontWeight: '800', color: newsTheme.secondary, lineHeight: '1.3' }}>
+                                                    <div style={{ margin: '0 0 8px 0', fontSize: '18px', fontWeight: '800', color: newsTheme.secondary, lineHeight: '1.3' }}>
                                                         <EditableText field="story1Title" value={data.story1Title || "The API Economy"} onUpdate={onUpdate} uneditable={uneditable} />
-                                                    </h4>
-                                                    <p style={{ margin: 0, fontSize: '14px', color: SaasThemeText, lineHeight: '1.5' }}>
+                                                    </div>
+                                                    <div style={{ margin: 0, fontSize: '14px', color: SaasThemeText, lineHeight: '1.5' }}>
                                                         <EditableText field="story1Desc" value={data.story1Desc || "How connected services are driving the next wave of innovation."} onUpdate={onUpdate} uneditable={uneditable} />
-                                                    </p>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -136,12 +136,12 @@ export const NewsletterModern = ({ data, onUpdate, onImageClick, uneditable }) =
                                                     </div>
                                                 </td>
                                                 <td style={{ paddingLeft: '24px' }} valign="middle">
-                                                    <h4 style={{ margin: '0 0 8px 0', fontSize: '18px', fontWeight: '800', color: newsTheme.secondary, lineHeight: '1.3' }}>
+                                                    <div style={{ margin: '0 0 8px 0', fontSize: '18px', fontWeight: '800', color: newsTheme.secondary, lineHeight: '1.3' }}>
                                                         <EditableText field="story2Title" value={data.story2Title || "Scalable Systems"} onUpdate={onUpdate} uneditable={uneditable} />
-                                                    </h4>
-                                                    <p style={{ margin: 0, fontSize: '14px', color: SaasThemeText, lineHeight: '1.5' }}>
+                                                    </div>
+                                                    <div style={{ margin: 0, fontSize: '14px', color: SaasThemeText, lineHeight: '1.5' }}>
                                                         <EditableText field="story2Desc" value={data.story2Desc || "Architecture patterns for high-growth engineering teams."} onUpdate={onUpdate} uneditable={uneditable} />
-                                                    </p>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
