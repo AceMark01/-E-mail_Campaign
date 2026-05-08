@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Lock, CheckCircle, AlertCircle, ArrowRight, Loader2, Sparkles } from 'lucide-react';
+import logo from '../assets/acelogo.png';
 
 export default function Login({ onLogin }) {
     const [credentials, setCredentials] = useState({ username: '', password: '' });
@@ -40,7 +41,7 @@ export default function Login({ onLogin }) {
             <div className="w-full max-w-md bg-white/90 backdrop-blur-xl rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-white p-8 z-10 animate-in slide-in-from-bottom-8 duration-700">
                 <div className="text-center mb-10">
                     <div className="inline-flex items-center justify-center mb-5">
-                        <img src="/src/assets/acelogo.png" alt="Ace Mail Logo" className="h-16 w-auto object-contain" />
+                        <img src={logo} alt="Ace Mail Logo" className="h-16 w-auto object-contain" />
                     </div>
                     <h1 className="text-3xl font-black text-slate-900 mb-2 tracking-tight">Welcome Back</h1>
                     <p className="text-slate-500 text-sm font-medium">Sign in to manage your Ace Mail campaigns</p>

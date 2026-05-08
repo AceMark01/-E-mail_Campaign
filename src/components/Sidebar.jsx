@@ -1,5 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, Send, Users, Settings, LogOut } from 'lucide-react';
+import logo from '../assets/acelogo.png';
 
 const Sidebar = () => {
     const menuItems = [
@@ -13,9 +14,12 @@ const Sidebar = () => {
     return (
         <aside className="w-64 bg-slate-900 text-white min-h-screen hidden md:flex flex-col shadow-xl">
             <div className="p-6 border-b border-slate-800">
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                    Ace Mail
-                </h2>
+                <div className="flex items-center gap-3 mb-2">
+                    <img src={logo} alt="Ace Mail" className="h-10 w-auto" />
+                    <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+                        Ace Mail
+                    </h2>
+                </div>
                 <p className="text-xs text-slate-400 mt-1">Campaign Manager</p>
             </div>
 

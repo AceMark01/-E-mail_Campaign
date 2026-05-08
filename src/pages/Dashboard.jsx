@@ -3,6 +3,7 @@ import { usePopup } from "../context/PopupContext";
 import {
   Send, Users, LayoutDashboard, LogOut, Trash2, History, Mail, BarChart3, Menu, Edit2, CheckCircle, X, AlertTriangle, ArrowLeft, Sparkles, RefreshCcw
 } from "lucide-react";
+import logo from "../assets/acelogo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, addUser, updateUser } from "../store/slices/audienceSlice";
 
@@ -289,7 +290,7 @@ export default function Dashboard({ onLogout }) {
       {/* MOBILE HEADER */}
       <div className="md:hidden fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-100 p-4 z-40 flex justify-between items-center shadow-sm">
         <div className="flex items-center gap-2">
-          <img src="/src/assets/acelogo.png" alt="Ace Mail" className="h-8 w-auto" />
+          <img src={logo} alt="Ace Mail" className="h-8 w-auto" />
           <span className="text-xl font-bold tracking-tight text-gray-900">Ace Mail</span>
         </div>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-gray-600 hover:bg-gray-100 rounded-xl transition-colors">
@@ -307,7 +308,7 @@ export default function Dashboard({ onLogout }) {
         <div className="flex flex-col h-full">
           <div className="p-8 mb-4">
             <div className="flex items-center gap-4">
-              <img src="/src/assets/acelogo.png" alt="Ace Mail" className="h-12 w-auto" />
+              <img src={logo} alt="Ace Mail" className="h-12 w-auto" />
               <div>
                 <span className="text-2xl font-black text-gray-900 tracking-tight block">Ace Mail</span>
                 <span className="text-xs font-semibold text-sky-500 uppercase tracking-wider">Pro Dashboard</span>
